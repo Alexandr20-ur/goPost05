@@ -151,7 +151,7 @@ func ListUsers() ([]Userdata, error) {
 	rows, err := db.Query(`
 		select "id","username","name","surname","description"
 		from "users" 
-		inner join on "userdata" users.id = userdata.userid`)
+		inner join "userdata" on users.id = userdata.userid`)
 	if err != nil {
 		return Data, err
 	}
