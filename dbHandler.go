@@ -5,6 +5,8 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+
+	_ "github.com/lib/pq"
 )
 
 func openConnection() (*sql.DB, error) {
